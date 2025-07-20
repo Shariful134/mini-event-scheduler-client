@@ -1,12 +1,11 @@
 import "./App.css";
+import MainLayout from "./components/layout/MainLayout";
 
 function App() {
   return (
-    <>
-      <h1 className="text-4xl text-green-300">
-        This is the Mini Event Scheduler
-      </h1>
-    </>
+    <div className="bg-gray-50">
+      <MainLayout />;
+    </div>
   );
 }
 
