@@ -4,7 +4,7 @@ import MainLayout from "./components/layout/MainLayout";
 function App() {
   return (
     <div className="bg-gray-50">
-      <MainLayout />;
+      <MainLayout />
     </div>
   );
 }
