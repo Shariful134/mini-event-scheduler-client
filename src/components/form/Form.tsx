@@ -39,13 +39,16 @@ export function FormComponent({ onClose }: FormComponentProps) {
     };
     console.log(finalData);
     try {
-      const res = await fetch("http://localhost:5000/api/v1/events/create", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(finalData),
-      });
+      const res = await fetch(
+        "https://event-scheduler-coral.vercel.app/api/v1/events/create",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(finalData),
+        }
+      );
       const response = await res.json();
       console.log("response: ", response);
     } catch (error) {

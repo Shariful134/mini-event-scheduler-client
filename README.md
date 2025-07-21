@@ -1,4 +1,4 @@
-# 🏋️ Gym Class Scheduling and Membership Management System
+# Mini Event Scheduler
 
 ## 📘 Project Overview
 
@@ -6,9 +6,13 @@ The **Mini Event Scheduler** is a FrontEnd web application that enables users to
 
 ---
 
-## 🔗 Live Server URL
+## 🔗 Live Frontend URL
 
-[👉 https://gym-scheduler-six.vercel.app](https://gym-scheduler-six.vercel.app/)
+[👉 https://event-scheduler-client-amber.vercel.app](https://event-scheduler-client-amber.vercel.app/)
+
+## 🔗 Live Backend URL
+
+[👉 https://event-scheduler-coral.vercel.app](https://event-scheduler-coral.vercel.app/)
 
 ---
 
@@ -16,6 +20,21 @@ The **Mini Event Scheduler** is a FrontEnd web application that enables users to
 
 - **FrontEnd:** React, TypeScript, Tailwind CSS
 - **Other:** Vite, RESTful API, AI-like logic
+
+---
+
+## 🚀 API Endpoints
+
+### 🔐 Event Routes (`/api/v1/events`)
+
+| Method | Endpoint        | Description    |
+| ------ | --------------- | -------------- |
+| POST   | `/create`       | create Eventes |
+| DELETE | `/delete/:id`   | delete Eventes |
+| PUT    | `/archived/:id` | archived Event |
+| GET    | `/get`          | Get all Events |
+
+---
 
 ## Clone Repository
 
@@ -71,18 +90,3 @@ Events are automatically categorized into one of three types using a simple keyw
 - Auto-categorization into Work / Personal / Other
 - Archive events(Toaggle)
 - Sorted events (ascending by date and time)
-
----
-
-## 🚀 API Endpoints
-
-### 🔐 Event Routes (`/api/v1/events`)
-
-| Method | Endpoint        | Description    |
-| ------ | --------------- | -------------- |
-| POST   | `/create`       | create Eventes |
-| DELETE | `/delete/:id`   | delete Eventes |
-| PUT    | `/archived/:id` | archived Event |
-| GET    | `/get`          | Get all Events |
-
----

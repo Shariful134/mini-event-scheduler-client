@@ -14,7 +14,9 @@ const EventsComponent = () => {
   const [filteredEvents, setFilteredEvents] = useState<Event[]>([]);
   const [filter, setFilter] = useState<string>("All");
   const getData = async () => {
-    const res = await fetch("http://localhost:5000/api/v1/events/get");
+    const res = await fetch(
+      "https://event-scheduler-coral.vercel.app/api/v1/events/get"
+    );
     const response = await res.json();
     setEvents(response?.Data);
     setFilteredEvents(response?.Data);
@@ -26,7 +28,7 @@ const EventsComponent = () => {
 
   const handleDelete = async (id: string) => {
     const res = await fetch(
-      `http://localhost:5000/api/v1/events/delete/${id}`,
+      `https://event-scheduler-coral.vercel.app/api/v1/events/delete/${id}`,
       {
         method: "DELETE",
         headers: {
@@ -43,9 +45,12 @@ const EventsComponent = () => {
 
   const handleArchive = async (id: string) => {
     console.log("arcived:", id);
-    await fetch(`http://localhost:5000/api/v1/events/archived/${id}`, {
-      method: "PUT",
-    });
+    await fetch(
+      `https://event-scheduler-coral.vercel.app/api/v1/events/archived/${id}`,
+      {
+        method: "PUT",
+      }
+    );
     getData();
   };
 
